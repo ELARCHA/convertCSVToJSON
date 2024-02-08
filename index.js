@@ -2,7 +2,7 @@
 import * as fs from 'fs';
 import { GetObjectCommand,PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 
-const client = new S3Client({});
+const client = new S3Client({region:"eu-west-1"});
 
 const command = new GetObjectCommand({
     Bucket: 'relarcha-input-bucket', Key: 'csvExemple.csv'
